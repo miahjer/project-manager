@@ -6,7 +6,7 @@ module.exports = function() {
     // Set up database
     mongoose.Promise = Promise;
 
-    var databaseUri = 'mongodb://localhost/Jer';
+    var databaseUri = 'mongodb://localhost/Jere';
     var db = mongoose.connection;
 
     // Use either localhost or env, if in Heroku

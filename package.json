@@ -1,5 +1,5 @@
 {
-  "name": "coordinate-kanban-app",
+  "name": "",
   "version": "1.0.0",
   "engines": {
     "node": "6.9.5",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seeksort/Coordinate-Kanban-App.git"
+    "url": ""
   },
-  "author": "seeksort",
-  "license": "ISC",
+  "author": "",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/seeksort/Coordinate-Kanban-App/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/seeksort/Coordinate-Kanban-App#readme",
+  "homepage": "",
   "dependencies": {
     "axios": "",
     "babel-core": "",
