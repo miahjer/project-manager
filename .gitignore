@@ -1,0 +1,6 @@
+node_modules
+.DS_Store
+notes.txt
+bundle.js
+frontback.js
+.eslintignore

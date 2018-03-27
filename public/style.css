@@ -1,0 +1,431 @@
+/* ========== Main ========== */
+body {
+    background-color: #fffde7;
+}
+#home-page {
+    background-color: #5c6bc0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#dashboard {
+    background-color: #fffde7; 
+}
+input[type="search"] {
+    height: 64px !important;
+    background-color: #5c6bc0;
+}
+main {
+     flex: 1 0 auto;
+ }
+.user_name {
+    font-weight: bold;
+    color: #BF3D3D !important;
+}
+a {
+    color: #000;
+}
+.btn,
+.btn-large {
+    background-color: #5c6bc0;
+    color: #FFF;
+    margin: 2px;
+}
+.btn:hover,
+.btn-large:hover {
+    background-color: #c5cae9;
+    color: #000;
+}
+.btn:focus,
+.btn-large:focus {
+    background-color: #c5cae9;
+    color: #000;
+}
+textarea {
+    background-color: #FFF;
+    height: 80px;
+    border-radius: 4px;
+    border: 1px solid #FFF; 
+}
+/* ========== Home Page ========== */
+#welcome-div {
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+    width: 30%;
+    height: 500px;
+    text-align: center;
+}
+#welcome-div>.btn,
+#welcome-div>.btn-large {
+    background-color: #c5cae9;
+    color: #000;
+}
+#welcome-div>.btn:hover,
+#welcome-div>.btn-large:hover {
+    background-color: #5c6bc0;
+    color: #FFF;
+}
+.modal {
+    width: 60%;
+    min-width: 450px;
+    max-height: 100%;
+}
+.btn-modal {
+    background-color: #5c6bc0;
+    color: #FFF;
+}
+.btn-modal:hover {
+    background-color: #c5cae9;
+    color: #000;
+}
+.home-page-footer {
+    text-align: center;
+    color: #FFF;
+}
+/* ========== Teams ========== */
+.team-categories {
+    text-align: left;
+    margin-left: 32px;
+}
+.team-options {
+    position: relative;
+    height: 70px;
+}
+.team-page-title {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #B9C9E5;
+}
+.team-member-div {
+    position: relative;
+    border-bottom: 1px solid #B9C9E5;
+    height: 70px;
+}
+.team-member-div>div {
+    display: inline-block;
+    margin: auto 0;
+}
+.team-member-icon>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.team-member-info>span {
+    display: block;
+}
+.team-member-options>div {
+    display: inline-block;
+}
+/* ========== Nav ========== */
+nav a,
+.button-collapse>a {
+    color: #FFF;
+}
+nav a:hover,
+.button-collapse>a:hover {
+    color: #D8DDEF;
+}
+.nav-wrapper {
+    background-color: #5c6bc0;
+}
+nav {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.nav-fixed {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin-bottom: 0px;
+    z-index: 998;
+  }
+.dropdown-content {
+    margin: 0;
+    display: none;
+    min-width: 175px;
+    max-height: 650px;
+    overflow-y: scroll;
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    will-change: width, height;
+}
+.dropdown-content li > a, .dropdown-content li > span {
+    font-size: 14px;
+    color: #5B5B5B;
+    display: block;
+    line-height: 18px;
+    padding: 14px 16px;
+}
+.dropdown-content li > a > i {
+    display: inline;
+    float: left;
+    font-size: 20px;
+}
+#dropdown-notifications {
+    min-width: 350px;
+}
+.notif-team-member,
+.notif-task {
+    font-weight: bold;
+}
+.notif-time {
+    font-style: italic;
+    color: #7F7F7F;
+}
+.side-nav {
+    width: 500px;
+}
+.delete-team-btn {
+    background-color: #DD413B;
+    color: #FFF;
+}
+.delete-team-btn:hover {
+    background-color: #FF4B44;
+    color: #000;
+}
+#delete-team-confirm {
+    color: #DD413B !important;
+}
+/* ========== Board ========== */
+.main-board {
+    background-color: #fffde7;
+    margin-top: 80px;
+}
+.grid {
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+}
+/* ========== Filter ========== */
+.proj-buttons-div {
+    display: block;
+    height: 40px;
+    width: 95%;
+    margin: 10px auto;
+}
+.proj-buttons-inner {
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #5c6bc0;
+    color: #FFF;
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+    padding-top: 8px;
+    text-align: center;
+}
+.proj-buttons-inner > a {
+    color: #FFF;
+}
+/* ========== List ========== */
+.list {
+    border-radius: 3px;
+    background-color: #c5cae9;
+}
+.project-snapshot:hover,
+.add-new-list:hover {
+    background-color: #ADB1CC;
+}
+.task-title {
+    margin: 4px 12px 0px 12px;   
+}
+.task-title-text {
+    display: inline-block;
+}
+.task-title-icon {
+    border-radius: 2px;
+    display: inline-block; 
+    height: 30px;
+    margin: 8px 0px;
+    float: right;  
+}
+.task-title-icon>i {
+    font-size: 18px;
+}
+.task-title-icon:hover {
+    background-color: #ADB1CC;
+}
+.task-group {
+    border-radius: 3px;
+    background-color: #c5cae9;
+    margin: 0px 6px;
+    max-height: 350px;
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+    border-color: #c5cae9;
+}
+.task-ind {
+    border-radius: 3px;
+    padding: 2px 4px 6px 4px;
+    background-color: #fff;
+    margin: 5px;
+}
+.task-ind:hover {
+    background-color: #e8eaf6;
+}
+.task-name {
+    display: inline;
+}
+div.task-ind.add-new-card {
+    background-color: #c5cae9;
+    border-color: #c5cae9;
+}
+div.task-ind.add-new-card:hover {
+    background-color: #ADB1CC;
+}
+.grid-item {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.due-date-div {
+    display: block;
+}
+.due-date-text {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 2px 4px 0px 2px;
+    background-color: #50A522;
+    color: #FFF;
+    max-width: 100%;
+    font-size: 13px;
+}
+.due-date-text>i {
+    font-size: 12px;
+}
+.create-proj {
+    border-radius: 3px;
+}
+.create-proj:hover {
+    background-color: #ADB1CC;
+}
+.create-proj>.task-title>h5>a {
+    color: #5c6bc0;
+}
+/* ========== Task Modal ========== */
+.task-modal {
+    min-width: 450px;
+    border-radius: 3px;
+    background-color: #C3C7E5;
+}
+.modal-heading-first {
+    font-weight: bold;
+    font-size: 18px;
+}
+.modal-heading-second {
+    font-weight: bold;
+    margin: 1px;
+    padding: 1px;
+    display: inline-block;
+}
+.task-modal-title-div,
+.task-modal-content-details,
+.task-modal-ppl-date,
+.task-modal-description,
+.task-modal-comment,
+.comment-title,
+.comment-user-div,
+.task-modal-activity,
+.activity-title,
+.activity-line {
+    display: block;
+}
+.task-modal-content,
+.task-modal-sidebar,
+.modal-close,
+.task-modal-title-details,
+.comment-user-pic,
+.comment-box-div,
+.comment-details {
+    display: inline-block;
+}
+.task-modal-title-details > p > input[type=text] {
+    font-weight: bold;
+    font-size: 24px;
+}
+.task-modal-title-details {
+    width: 90%;
+}
+.task-modal-close>i {
+    position: relative;
+}
+.task-modal-list{
+    color: gray;
+    font-style: italic;
+}
+/*.task-modal-tag {
+    height: 18px;
+    width: 18px;
+    border-radius: 3px;
+}*/
+.task-modal-content {
+    width: 80%;
+}
+/*.task-modal-sidebar {
+    display: inline-block;
+    width: 19%;
+}*/
+.comment-details {
+    margin: 2px;
+    padding: 0 10px;
+    border-radius: 4px;
+    background-color: #FFF;
+    width: 80%;
+}
+.comment-box-div {
+    display: inline-block;
+    width: 80%;
+}
+textarea.materialize-textarea {
+    background-color: #FFF;
+}
+.team-member-icon {
+    float: left;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.task-modal-ppl-date > .input-field {
+    margin-top: 0px;
+    padding-left: 0px;
+}
+/*Masonry.js classes*/
+.gutter-sizer {
+    width: 1%;
+}
+.grid-sizer,
+.grid-item {
+    width: 32%; 
+}
+
+/* ========== Media Queries ========== */
+@media screen and (max-width: 980px) {
+    .grid-sizer,
+    .grid-item {
+        float: left;
+        width: 32%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid-sizer,
+    .grid-item {
+        float: left;
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .grid-sizer,
+    .grid-item {
+        float: left;
+        width: 98%;
+    }
+}
+
+
