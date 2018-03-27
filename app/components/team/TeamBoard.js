@@ -50,8 +50,8 @@ var TeamBoard = React.createClass({
                         </div>
 
                         <div className="team-page-title">
-                            <h4>Super Saiyan Squad</h4>
-                            <p className="team-description">A team of warriors seeking the Dragonballs.</p>
+                            <h4></h4>
+                            <p className="team-description"></p>
                         </div>
                         <div className="team-list-div">
                             <div className="team-list">

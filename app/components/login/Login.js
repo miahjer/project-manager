@@ -64,8 +64,8 @@ var Login = withRouter(React.createClass({
                     <main className="container">
                         <div className="row">
                             <div id="welcome-div" className="col s12">
-                                <h1>Get It Together</h1>
-                                <h5>Kanban dashboards that help teams flow.</h5>
+                                <h1>Alert App</h1>
+                                <h5>Manage tasks easy for teams</h5>
                                 <br />
 
                                 <LoginModals 
@@ -88,7 +88,7 @@ var Login = withRouter(React.createClass({
                     <footer className="home-page-footer">
                         <div className="">
                             <div className="container">
-                            Final Project for the Coding Bootcamp at UT Austin. © 2017 Kristin Faner
+                            Final Senior Projectnal Project. © 2018 Jeremiah Jackson, Antonio Newby, Earl Archer
                             </div>
                           </div>
                     </footer>   
