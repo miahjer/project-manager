@@ -165,7 +165,7 @@ var ProjBoard = React.createClass({
                                 >
 
                                     <div className="modal-content">
-                                        <h4>Add a List</h4>
+                                        <h4>Add a Project</h4>
                                         <div className="row">
                                             {/* FORM WITH POST */}
                                             <form className="col s12" onSubmit={this.handleSubmit}>

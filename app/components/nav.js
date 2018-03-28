@@ -43,13 +43,13 @@ var Nav = withRouter(React.createClass({
                             {/* Top Right Nav */} 
                             <ul id="nav-mobile" className="right hide-on-med-and-down">
                                 <li>
-                                    <a href="#/team"><i className="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Team">people</i></a>
+                                    <a href="#/team"><i className="material-icons tooltipped" data-position="bottom" data-delay="50" data-tooltip="Team">people_outline</i></a>
                                 </li>
                                 <li>
                                     <a href="#/projects" className="dropdown-button" data-activates="dropdown-projects" data-beloworigin="true" data-hover="true"><i className="material-icons">developer_board</i></a>
                                 </li>
                                 <li>
-                                    <a href="#" className="dropdown-button" data-activates="dropdown-notifications" data-beloworigin="true" data-hover="true"><i className="material-icons">notifications</i></a>
+                                    <a href="#" className="dropdown-button" data-activates="dropdown-notifications" data-beloworigin="true" data-hover="true"><i className="material-icons"></i></a>
                                 </li>
                                 <li>
                                     <a href="#/board" className="dropdown-button" data-activates="dropdown-profile" data-beloworigin="true" data-hover="true"><i className="material-icons">person_pin</i></a>
