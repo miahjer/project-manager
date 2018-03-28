@@ -26,11 +26,10 @@ var LoginModal = React.createClass({
                             <form className="col s12" onSubmit={this.props.handleLoginSubmit}>
                                 <div className="row">
                                     <div className="col s4">
-                                        <h5>Guest Account:</h5>
+                                      
                                     </div>
                                     <div className="col s8">
-                                        <p>Email: guest@wow.com</p>
-                                        <p>Password: iamaguest</p>
+                                        
                                     </div>
                                 </div>
                                 <hr />
