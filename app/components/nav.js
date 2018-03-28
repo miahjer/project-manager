@@ -37,7 +37,7 @@ var Nav = withRouter(React.createClass({
                     <nav>
                         <div className="nav-wrapper">
                             {/* Normal Nav */} 
-                            <a href="#/team" className="brand-logo center">Project Alert</a>
+                            <a href="#/team" className="brand-logo center">Project App</a>
                             <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
 
                             {/* Top Right Nav */} 

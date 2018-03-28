@@ -64,7 +64,7 @@ var Login = withRouter(React.createClass({
                     <main className="container">
                         <div className="row">
                             <div id="welcome-div" className="col s12">
-                                <h1>Alert App</h1>
+                                <h1>Project App</h1>
                                 <h5>Manage tasks easy for teams</h5>
                                 <br />
 
