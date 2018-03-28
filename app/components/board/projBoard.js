@@ -180,7 +180,6 @@ var ProjBoard = React.createClass({
                                                             onChange={this.handleChange} 
                                                         />
                                                         <label htmlFor="projectName">Project Name</label>
-                                                        <label htmlFor="project_description">Team Description</label>
                                                         <lablel htmlFor="ProjectDesc">Project Description</lablel>
                                                     </div>
                                                     <div className="col s12 right-align">
