@@ -151,8 +151,8 @@ var ProjBoard = React.createClass({
                     <div className="main-board">
 
                         {/* Filter */}
-                        <div className="proj-buttons-div">
-                             <div className="proj-buttons-inner">
+                        <div className="">
+                             <div className="">
                              </div>
 
                             {/* Add a List */}
