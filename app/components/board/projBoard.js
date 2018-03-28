@@ -153,14 +153,14 @@ var ProjBoard = React.createClass({
                         {/* Filter */}
                         <div className="proj-buttons-div">
                              <div className="proj-buttons-inner">
-                                 <a href="" className="tooltipped"data-delay="50" data-tooltip="Re-sort" id="sorter" data-sort-value="title"><i className="material-icons center">filter_list</i></a>
+                                 <a href="" className="tooltipped"data-delay="50" data-tooltip="Re-sort" id="sorter" data-sort-value="title"><i className="material-icons center"></i></a>
                              </div>
 
                             {/* Add a List */}
                              <div className="proj-buttons-inner">
                                 <Modal
                                     trigger={
-                                        <a href="#modal1" className="tooltipped" data-delay="50" data-tooltip="Add a List"><i className="material-icons center">add</i></a>
+                                        <a href="#modal1" className="tooltipped" data-delay="50" data-tooltip="Add a Project"><i className="material-icons center">add</i></a>
                                     }
                                 >
 
@@ -178,7 +178,7 @@ var ProjBoard = React.createClass({
                                                             value={this.state.listName}
                                                             onChange={this.handleChange} 
                                                         />
-                                                        <label htmlFor="listName">List Name</label>
+                                                        <label htmlFor="listName">Project Name</label>
                                                     </div>
                                                     <div className="col s12 right-align">
                                                         <button type="submit" className="modal-action modal-close waves-effect waves-green btn btn-modal">Save</button>
