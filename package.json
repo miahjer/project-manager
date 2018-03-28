@@ -44,12 +44,12 @@
     "passport": "",
     "passport-local": "",
     "passport-local-mongoose": "",
-    "react": "",
-    "react-dom": "",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "react-materialize": "",
     "react-router": "",
     "socket.io": "",
-    "webpack": ""
+    "webpack": "^1.14.0"
   },
   "devDependencies": {},
   "keywords": []
