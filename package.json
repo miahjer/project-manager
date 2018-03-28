@@ -38,6 +38,7 @@
     "express-session": "^1.15.0",
     "isotope-layout": "^3.0.2",
     "moment": "^2.18.1",
+    "mongodb": "^3.0.5",
     "mongoose": "^4.7.6",
     "morgan": "^1.7.0",
     "packery": "^2.1.1",
