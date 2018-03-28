@@ -29,3 +29,4 @@ app.listen(PORT, function() {
 });
 
 
+connection.openUri('mongodb://localhost/Jere', { /* options */ });
