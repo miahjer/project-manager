@@ -1,19 +1,19 @@
 /* ========== Main ========== */
 body {
-    background-color: #fffde7;
+    background-color: #ffffff;
 }
 #home-page {
-    background-color: #5c6bc0;
+    background-color: #228B22;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
 #dashboard {
-    background-color: #fffde7; 
+    background-color: #ffffff; 
 }
 input[type="search"] {
     height: 64px !important;
-    background-color: #5c6bc0;
+    background-color: #228B22;
 }
 main {
      flex: 1 0 auto;

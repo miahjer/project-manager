@@ -6,7 +6,8 @@ var React = require('react'),
     // Packery = require('packery'),
     // Draggabilly = require('draggabilly'),
     Isotope = require('isotope-layout');
-
+import Date from '../date.js';
+import Moment from 'moment';
 Modal.defaultProps = {
     actions: false
 };
@@ -14,8 +15,8 @@ Modal.defaultProps = {
 var ProjBoard = React.createClass({
     getInitialState: function() {
         return {
-            listName: '',
-            lists: [],
+            projectName: '',
+            projects: [],
             users: []
         }
     },
@@ -47,8 +48,8 @@ var ProjBoard = React.createClass({
             $('.tooltipped').tooltip({delay: 50});
         });
         // Make server call to get project
-        helpers.getProject("bake-some-pies").then(function(data){
-            this.setState({lists: data.lists, users: data.users});
+        helpers.getProject("something-something").then(function(data){
+            this.setState({projects: data.project, users: data.users});
             console.log(this.state)
         }.bind(this))
     },
@@ -91,22 +92,22 @@ var ProjBoard = React.createClass({
         event.preventDefault();
         // Variables for incomplete app...
         var team = 'regulators';
-        var project = 'bake-some-pies';
-        helpers.addList(team, project, this.state.listName).then(function(data){
-            this.state.listName = '';
+        var project = 'something-something';
+        helpers.addproject(team, project, this.state.projectName).then(function(data){
+            this.state.projectName = '';
             // Another server call to reload lists
-            helpers.getProject("bake-some-pies").then(function(data){
-                this.setState({lists: data.lists});
+            helpers.getProject("something-something").then(function(data){
+                this.setState({projects: data.project});
             }.bind(this))
         }.bind(this));
     },
 
-    setParent: function(newLists){
+    setParent: function(newProjects){
         this.setState({
-            lists: []
+            projects: []
         })
         this.setState({
-            lists: newLists
+            projects: newProjects
         })
         alert("Update successful.")
     },
@@ -114,15 +115,15 @@ var ProjBoard = React.createClass({
     renderLists: function() {
         var parentFcn = this.setParent
         var users = this.state.users
-        return this.state.lists.map(function(currentList,index){
+        return this.state.projects.map(function(currentProject,index){
             return (
                 <List 
                     key={index}
                     id={"list-"+index}
                     listIndex={index}
-                    title={currentList.title}
-                    listId={currentList.listId}
-                    tasks={currentList.tasks}
+                    title={currentProject.title}
+                    listId={currentProject.listId}
+                    tasks={currentProject.tasks}
                     setParent={parentFcn}
                     users={users}
                 />
@@ -156,29 +157,31 @@ var ProjBoard = React.createClass({
                                  <a href="" className="tooltipped"data-delay="50" data-tooltip="Re-sort" id="sorter" data-sort-value="title"><i className="material-icons center">filter_list</i></a>
                              </div>
 
-                            {/* Add a List */}
+                            {/* Add a Project */}
                              <div className="proj-buttons-inner">
                                 <Modal
                                     trigger={
-                                        <a href="#modal1" className="tooltipped" data-delay="50" data-tooltip="Add a List"><i className="material-icons center">add</i></a>
+                                        <a href="#modal1" className="tooltipped" data-delay="50" data-tooltip="Add a Project"><i className="material-icons center">add</i></a>
                                     }
                                 >
 
                                     <div className="modal-content">
-                                        <h4>Add a List</h4>
+                                        <h4>Add a projectt</h4>
                                         <div className="row">
                                             {/* FORM WITH POST */}
                                             <form className="col s12" onSubmit={this.handleSubmit}>
                                                 <div className="row">
                                                     <div className="input-field col s12">
                                                         <input 
-                                                            id="listName" 
+                                                            id="projectName" 
                                                             type="text" 
                                                             className="validate"
-                                                            value={this.state.listName}
+                                                            value={this.state.projectName}
                                                             onChange={this.handleChange} 
                                                         />
-                                                        <label htmlFor="listName">List Name</label>
+                                                        <label htmlFor="projectName">Project Name</label>
+                                                        <label htmlFor="project_description">Team Description</label>
+                                                        <lablel htmlFor="ProjectDesc">Project Description</lablel>
                                                     </div>
                                                     <div className="col s12 right-align">
                                                         <button type="submit" className="modal-action modal-close waves-effect waves-green btn btn-modal">Save</button>
