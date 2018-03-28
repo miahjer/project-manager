@@ -9,7 +9,6 @@ var router = require('./server-routes/routes');
 var app = express();
 var server = require('http').Server(app);
 // Local Host or Heroku env.Port
-
 var PORT = process.env.PORT || 3000;
 
 // start logger and make public files available
@@ -29,18 +28,4 @@ app.listen(PORT, function() {
     console.log('Server now listening on port ' + PORT);
 });
 
-var forceSsl = function (req, res, next) {
-    if (req.headers['x-forwarded-proto'] !== 'https') {
-        return res.redirect(['https://', req.get('Host'), req.url].join(''));
-    }
-    return next();
- };
 
- app.configure(function () {
-
-    if (PORT === 'production') {
-        app.use(forceSsl);
-    }
-
-    // other configurations etc for express go here...
-}
