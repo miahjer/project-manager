@@ -5,8 +5,6 @@ module.exports = function() {
 
     // Set up database
     mongoose.Promise = Promise;
-
-    var databaseUri = 'mongodb://localhost/Jere';
     var db = mongoose.connection;
 
     // Use either localhost or env, if in Heroku
@@ -14,7 +12,7 @@ module.exports = function() {
         mongoose.connect(process.env.MONGODB_URI);
     } 
     else {
-        mongoose.connect(databaseUri);
+        mongoose.connect('mongodb://localhost/Jere');
     }
 
     // Catch Mongoose errors
