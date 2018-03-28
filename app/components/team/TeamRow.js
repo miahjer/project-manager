@@ -17,12 +17,12 @@ var TeamRow = React.createClass({
             {/* Team Member */}
             <div className="team-member-div">
                 <div className="team-member-icon">
-                    <img src="yuna.jpg" />
+                    <img src="jer.jpg" />
                 </div>
                 <div className="team-member-info">
-                    <span className="team-member-name">Son Goku</span>
-                    <span className="team-member-title">Senior Front End Developer</span>
-                    <span className="team-member-role">Member</span>
+                    <span className="team-member-name">Jeremiah Jackson</span>
+                    <span className="team-member-title">Student-Back End Dev</span>
+                    <span className="team-member-role">Admin</span>
                 </div>
                 <div className="team-member-options right hide-on-med-and-down">
                     <div>
