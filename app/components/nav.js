@@ -22,10 +22,8 @@ var Nav = withRouter(React.createClass({
 
                 {/* Dropdowns */} 
                 <ul id="dropdown-projects" className="dropdown-content">
-                    <li><a href="#">Project One</a></li>
-                    <li><a href="#">Project Two</a></li>
                     <li className="divider"></li>
-                    <li><a href="#"><i className="tiny material-icons">add</i>Create Project...</a></li>
+                    <li><a href="#"><i className="tiny material-icons">add</i>Create Project</a></li>
                 </ul>
                 {/*<ul id="dropdown-notifications" className="dropdown-content">
         <li><a>No recent notifications</a></li>
@@ -64,24 +62,20 @@ var Nav = withRouter(React.createClass({
                     {/* side nav must be outside of nav tag to coexist w/ fixed nav. */}
                     <ul className="side-nav collapsible" id="mobile-demo">
                         <li>
-                            <div className="collapsible-header"><a href="#/team"><i className="tiny material-icons">people</i>Team</a></div>
+                            <div className="collapsible-header"><a href="#/team"><i className="tiny material-icons">people_outline</i>Team</a></div>
                         </li>
                         <li>
                             <div className="collapsible-header"><a href="#" className="secondary-content"><i className="tiny material-icons">expand_more</i></a><a href="#/projects"><i className="tiny material-icons">developer_board</i>Projects</a></div>
                             <div className="collapsible-body">
                                 <ul>
-                                    <li><a href="#">Project One</a></li>
-                                    <li><a href="#">Project Two</a></li>
-                                    <li><a href="#"><i className="tiny material-icons">add</i>Create Project...</a></li>
+                                    
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <div className="collapsible-header"><a href="#" className="secondary-content"><i className="tiny material-icons">expand_more</i></a><a href="#"><i className="tiny material-icons">notifications</i>Notifications</a></div>
+                            <div className="collapsible-header"><a href="#" className="secondary-content"><i className="tiny material-icons">expand_more</i></a><a href="#"></a></div>
                             <div className="collapsible-body">
-                                <ul>
-                                    <li><a>No recent notifications</a></li>
-                                </ul>
+                               
                             </div>
                         </li>
                         <li>

@@ -1,11 +1,11 @@
 {
-  "name": "coordinate-kanban-app",
+  "name": "Jer-app",
   "version": "1.0.0",
   "engines": {
-    "node": "6.9.5",
+    "node": "8.9.4",
     "npm": "3.10.10"
   },
-  "description": "A Trello clone built with React, Node, and Mongo.",
+  "description": "Senior Project app",
   "main": "server.js",
   "scripts": {
     "compile": "webpack",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seeksort/Coordinate-Kanban-App.git"
+    "url": ""
   },
-  "author": "seeksort",
-  "license": "ISC",
+  "author": "jer",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/seeksort/Coordinate-Kanban-App/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/seeksort/Coordinate-Kanban-App#readme",
+  "homepage": "",
   "dependencies": {
     "axios": "^0.15.3",
     "babel-core": "^6.21.0",

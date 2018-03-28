@@ -129,7 +129,7 @@ nav a:hover,
     color: #D8DDEF;
 }
 .nav-wrapper {
-    background-color: #5c6bc0;
+    background-color: #228B22;
 }
 nav {
     position: relative;
@@ -194,7 +194,7 @@ nav {
 }
 /* ========== Board ========== */
 .main-board {
-    background-color: #fffde7;
+    background-color: #fff;
     margin-top: 80px;
 }
 .grid {
