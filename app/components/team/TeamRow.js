@@ -28,8 +28,9 @@ var TeamRow = React.createClass({
                     <div>
                         <label>Change Member Role</label>
                         <select className="browser-default" defaultValue="1">
-                            <option value="1">Member</option>
-                            <option value="2">Admin</option>
+                            <option value="1">Admin</option>
+                            <option value="2">Member</option>
+                            
                           </select>
                     </div>
                     <div>
