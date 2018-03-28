@@ -27,9 +27,10 @@ var Nav = withRouter(React.createClass({
                     <li className="divider"></li>
                     <li><a href="#"><i className="tiny material-icons">add</i>Create Project...</a></li>
                 </ul>
-                <ul id="dropdown-notifications" className="dropdown-content">
-                    <li><a>No recent notifications</a></li>
-                </ul>
+                {/*<ul id="dropdown-notifications" className="dropdown-content">
+        <li><a>No recent notifications</a></li>
+        </ul>*/}
+
                 <ul id="dropdown-profile" className="dropdown-content">
                     <li><a href="" onClick={this.handleSignOut}>Sign Out</a></li>
                 </ul>
@@ -38,7 +39,7 @@ var Nav = withRouter(React.createClass({
                     <nav>
                         <div className="nav-wrapper">
                             {/* Normal Nav */} 
-                            <a href="#/team" className="brand-logo center">Get It Together</a>
+                            <a href="#/team" className="brand-logo center">Project Alert</a>
                             <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
 
                             {/* Top Right Nav */} 
