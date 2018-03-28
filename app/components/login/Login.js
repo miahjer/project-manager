@@ -88,7 +88,7 @@ var Login = withRouter(React.createClass({
                     <footer className="home-page-footer">
                         <div className="">
                             <div className="container">
-                            Final Senior Project Project. © 2018 Jeremiah Jackson, Antonio Newby, Earl Archer
+                            Final Senior Project. © 2018 Jeremiah Jackson, Antonio Newby, Earl Archer
                             </div>
                           </div>
                     </footer>   
