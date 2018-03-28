@@ -6,8 +6,7 @@ var React = require('react'),
     // Packery = require('packery'),
     // Draggabilly = require('draggabilly'),
     Isotope = require('isotope-layout');
-import Date from '../date.js';
-import Moment from 'moment';
+
 Modal.defaultProps = {
     actions: false
 };
@@ -15,8 +14,8 @@ Modal.defaultProps = {
 var ProjBoard = React.createClass({
     getInitialState: function() {
         return {
-            projectName: '',
-            projects: [],
+            listName: '',
+            lists: [],
             users: []
         }
     },
@@ -49,7 +48,7 @@ var ProjBoard = React.createClass({
         });
         // Make server call to get project
         helpers.getProject("bake-some-pies").then(function(data){
-            this.setState({projects: data.project, users: data.users});
+            this.setState({lists: data.lists, users: data.users});
             console.log(this.state)
         }.bind(this))
     },
@@ -93,21 +92,21 @@ var ProjBoard = React.createClass({
         // Variables for incomplete app...
         var team = 'regulators';
         var project = 'bake-some-pies';
-        helpers.addproject(team, project, this.state.projectName).then(function(data){
-            this.state.projectName = '';
+        helpers.addList(team, project, this.state.listName).then(function(data){
+            this.state.listName = '';
             // Another server call to reload lists
             helpers.getProject("bake-some-pies").then(function(data){
-                this.setState({projects: data.project});
+                this.setState({lists: data.lists});
             }.bind(this))
         }.bind(this));
     },
 
-    setParent: function(newProjects){
+    setParent: function(newLists){
         this.setState({
-            projects: []
+            lists: []
         })
         this.setState({
-            projects: newProjects
+            lists: newLists
         })
         alert("Update successful.")
     },
@@ -115,15 +114,15 @@ var ProjBoard = React.createClass({
     renderLists: function() {
         var parentFcn = this.setParent
         var users = this.state.users
-        return this.state.projects.map(function(currentProject,index){
+        return this.state.lists.map(function(currentList,index){
             return (
                 <List 
                     key={index}
                     id={"list-"+index}
                     listIndex={index}
-                    title={currentProject.title}
-                    listId={currentProject.listId}
-                    tasks={currentProject.tasks}
+                    title={currentList.title}
+                    listId={currentList.listId}
+                    tasks={currentList.tasks}
                     setParent={parentFcn}
                     users={users}
                 />
@@ -157,30 +156,29 @@ var ProjBoard = React.createClass({
                                  <a href="" className="tooltipped"data-delay="50" data-tooltip="Re-sort" id="sorter" data-sort-value="title"><i className="material-icons center">filter_list</i></a>
                              </div>
 
-                            {/* Add a Project */}
+                            {/* Add a List */}
                              <div className="proj-buttons-inner">
                                 <Modal
                                     trigger={
-                                        <a href="#modal1" className="tooltipped" data-delay="50" data-tooltip="Add a Project"><i className="material-icons center">add</i></a>
+                                        <a href="#modal1" className="tooltipped" data-delay="50" data-tooltip="Add a List"><i className="material-icons center">add</i></a>
                                     }
                                 >
 
                                     <div className="modal-content">
-                                        <h4>Add a projectt</h4>
+                                        <h4>Add a List</h4>
                                         <div className="row">
                                             {/* FORM WITH POST */}
                                             <form className="col s12" onSubmit={this.handleSubmit}>
                                                 <div className="row">
                                                     <div className="input-field col s12">
                                                         <input 
-                                                            id="projectName" 
+                                                            id="listName" 
                                                             type="text" 
                                                             className="validate"
-                                                            value={this.state.projectName}
+                                                            value={this.state.listName}
                                                             onChange={this.handleChange} 
                                                         />
-                                                        <label htmlFor="projectName">Project Name</label>
-                                                        <lablel htmlFor="ProjectDesc">Project Description</lablel>
+                                                        <label htmlFor="listName">List Name</label>
                                                     </div>
                                                     <div className="col s12 right-align">
                                                         <button type="submit" className="modal-action modal-close waves-effect waves-green btn btn-modal">Save</button>
