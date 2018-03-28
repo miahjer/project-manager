@@ -2,7 +2,7 @@
   "name": "Jer-app",
   "version": "1.0.0",
   "engines": {
-    "node": "8.9.4",
+    "node": "6.9.5",
     "npm": "3.10.10"
   },
   "description": "Senior Project app",
