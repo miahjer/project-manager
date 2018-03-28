@@ -49,7 +49,7 @@ var ProjBoard = React.createClass({
         });
         // Make server call to get project
         helpers.getProject("bake-some-pies").then(function(data){
-            this.setState({projects: data.project, users: data.users});
+            this.setState({projects: data.lists, users: data.users});
             console.log(this.state)
         }.bind(this))
     },
@@ -97,7 +97,7 @@ var ProjBoard = React.createClass({
             this.state.projectName = '';
             // Another server call to reload lists
             helpers.getProject("bake-some-pies").then(function(data){
-                this.setState({projects: data.project});
+                this.setState({projects: data.lists});
             }.bind(this))
         }.bind(this));
     },
