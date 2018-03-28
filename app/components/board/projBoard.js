@@ -153,7 +153,6 @@ var ProjBoard = React.createClass({
                         {/* Filter */}
                         <div className="proj-buttons-div">
                              <div className="proj-buttons-inner">
-                                 <a href="" className="tooltipped"data-delay="50" data-tooltip="Re-sort" id="sorter" data-sort-value="title"><i className="material-icons center"></i></a>
                              </div>
 
                             {/* Add a List */}
