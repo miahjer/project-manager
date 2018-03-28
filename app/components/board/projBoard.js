@@ -48,7 +48,7 @@ var ProjBoard = React.createClass({
             $('.tooltipped').tooltip({delay: 50});
         });
         // Make server call to get project
-        helpers.getProject("something-something").then(function(data){
+        helpers.getProject("bake-some-pies").then(function(data){
             this.setState({projects: data.project, users: data.users});
             console.log(this.state)
         }.bind(this))
@@ -92,11 +92,11 @@ var ProjBoard = React.createClass({
         event.preventDefault();
         // Variables for incomplete app...
         var team = 'regulators';
-        var project = 'something-something';
+        var project = 'bake-some-pies';
         helpers.addproject(team, project, this.state.projectName).then(function(data){
             this.state.projectName = '';
             // Another server call to reload lists
-            helpers.getProject("something-something").then(function(data){
+            helpers.getProject("bake-some-pies").then(function(data){
                 this.setState({projects: data.project});
             }.bind(this))
         }.bind(this));
