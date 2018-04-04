@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Promise = require('bluebird');
-
+var mongo = require("mongodb").MongoClient;
 module.exports = function() {
 
     // Set up database
@@ -8,8 +8,8 @@ module.exports = function() {
     var db = mongoose.connection;
 
     // Use either localhost or env, if in Heroku
-    if (process.env.MONGODB_URI) {
-        mongoose.connect(process.env.MONGODB_URI);
+    if (process.env.MONGOLAB_URI) {
+        mongoose.connect(process.env.MONGOLAB_URI);
     } 
     else {
         mongoose.connect('mongodb://localhost/Jere');
