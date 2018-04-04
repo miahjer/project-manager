@@ -9,7 +9,7 @@ var router = require('./server-routes/routes');
 var app = express();
 var server = require('http').Server(app);
 // Local Host or Heroku env.Port
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 5000;
 
 // start logger and make public files available
 app.use(morgan('dev'));
