@@ -28,14 +28,17 @@ module.exports = function (router) {
     router.use(passport.initialize());
     router.use(passport.session());
     passport.use(User.createStrategy());
-    passport.serializeUser(User.serializeUser(function(user, done){
-        done(null, user.id);
-    }));
-    passport.deserializeUser(User.deserializeUser(function(id, done) {
-        User.findOne({ _id: id }).then(function(user) {
-            done(null, { id: user.id, username: user.username});
-        })
-    }));
+    passport.serializeUser(function(user, done){
+        done(null, user.id)
+      })
+      
+      passport.deserializeUser(function(id, done){
+        User.findOne({_id : id })
+          .then(user => {
+             done(null, user)
+    })
+      });
+    
 
     /* ======== User Account Actions ======== */
     // Create new account
@@ -76,7 +79,7 @@ module.exports = function (router) {
             if (!user) { 
                 return res.send({success: false, message: "Invalid Login" }); 
             }
-            req.logIn(user, function(err) {
+            req.login(user, function(err) {
                 if (err) { 
                     return next(err); 
                 }

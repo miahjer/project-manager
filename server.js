@@ -9,7 +9,7 @@ var router = require('./server-routes/routes');
 var app = express();
 var server = require('http').Server(app);
 // Local Host or Heroku env.Port
-var PORT = process.env.PORT || 5000;
+var port = process.env.PORT || 3000;
 
 // start logger and make public files available
 app.use(morgan('dev'));
@@ -24,8 +24,8 @@ app.get('/', function(req, res) {
 app.use(router); // api routes
 
 // Turn on server
-app.listen(PORT, function() {
-    console.log('Server now listening on port ' + PORT);
-});
+app.listen(port, function() {
+    console.log('Server now listening on port ' + port);
+ });
 
 
